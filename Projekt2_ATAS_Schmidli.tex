@@ -175,7 +175,7 @@ This chapter will provide a detailed overview how the ATAS System was implemente
 
 \newpage
 \noindent
-\section{Diagramm}
+\section{System Overview}
 \includegraphics[width=0.9\textwidth]{img/ATAS_SystemOverview_Detail.png}
 
 \newpage
@@ -185,7 +185,7 @@ The tracker itself contains different components.
 \subsection{Computer}
 As my knowledge for hardware close porgramming (c, c++ ...) is failry limited, I decided to use a hardware plattform, which handles most of the system tasks for me. The computer had to be small and doesn't use to much energy. I decided to use a Raspberry Pie 3  single board computer.
 
-\subsubsection{Diagramm}
+\subsubsection{System Overview}
 The Raspberry Pie is connected to other devices\\[0.3cm]
 \includegraphics[width=\textwidth]{img/ATAS_SystemOverview_Tracker_Computer.jpg}
 
@@ -353,9 +353,26 @@ We can use the search bar to search for a location. Found locations are displaye
 \newpage
   
 \subsection{Atas-Node}  
-Atas-Node is the software running on the tracker computer.\\
-Every 20 seconds the tracker is requesting new GPS data from the GPS Module.\\
-The data is then sent to the LoRaWan interface. 
+Atas-Node is the software component running on the tracker computer. The software is written in c++.\\[0.3cm]
+To make the communication between atas-node and the GPS Module as easy as possible I decided to install GPSD. GPSD is a daemin running on the linux os on the tracker. GPSD provides us a simple interface and a c++ library to query the actual GPS position. No data decoding needed, everything is already taken care of.\
+
+\subsubsection{Functionality}
+For every task I created a separate module / class in c++.
+\begin{itemize}
+\item \textbf{Ataslora}\\
+Handles the communication with the LoRaWan Module. Used for sending and receiving data
+\item \textbf{Atasgps}\\
+Handles the communication with the GPSD Deamon. Queries the GPS location.
+\item \textbf{Atasbutton}\\
+Initialized the GPIO PIN to act as an Input. Reads the GPIO levels, High or Low.
+\item \textbf{Atassound}\\
+Controls the Piezo speaker. Enables or disables the alarmsound.
+\end{itemize}
+
+\subsubsection{Process}
+On the next page you are going to see a flow chart of the atas-node programm. The flowchart doesn't represent the actual code. Dummy syntax /code was used to make the chart as understanbale as possible.
+\newpage
+\includegraphics[width=0.88\textwidth]{img/atas-node-process}\\
 
 
 \chapter{Data}
