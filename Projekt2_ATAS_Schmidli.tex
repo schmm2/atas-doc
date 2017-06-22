@@ -1,0 +1,365 @@
+\documentclass[a4paper,11pt, oneside]{report}
+
+% Package import
+\usepackage[a4paper,inner=3.5cm,outer=2.5cm]{geometry}
+\usepackage[english,american]{babel}
+
+\usepackage{latexsym}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{etoolbox}
+\usepackage{fancyhdr}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage[xindy]{glossaries}
+\usepackage{hyperref}
+
+% Glossar
+\newglossaryentry{ATAS}
+{
+    name=ATAS,
+    description={Aplinist Tracker \& Alerting System}
+}
+
+\theoremstyle{definition}
+\newtheorem{exmp}{Beispiel}[subsection]
+
+
+\makeglossaries
+
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{1}
+
+\begin{document}
+\pagestyle{empty} %Keine Kopf-/Fusszeilen auf den ersten Seiten.
+\begin{titlepage}
+\begin{center}
+
+% Oberer Teil der Titelseite:
+\includegraphics[width=0.08\textwidth]{img/bfh_logo.png}\\[1cm]    
+\textsc{\LARGE Bern University of Applied Sciences}\\[1.5cm]
+\textsc{\Large Project 2}\\[0.5cm]
+
+% Title
+\newcommand{\HRule}{\rule{\linewidth}{0.3mm}}
+\HRule \\[0.4cm]
+{\huge Aplinist Tracker \& Alerting System}\\[0.3cm]
+{\huge \bfseries  ATAS}
+\HRule \\[2cm]
+
+\includegraphics[width=0.2\textwidth]{img/atas_logo.png}\\[3cm]    
+
+% Author und Lehrer
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Author:}\\
+Martin \textsc{Schmidli}\\
+\end{flushleft}
+\end{minipage}
+\hfill
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Teacher:} \\
+Mohamed \textsc{Mokdad}
+\end{flushright}
+\end{minipage}
+\vfill
+
+% Unterer Teil der Seite
+Bern, {\large \today}
+\end{center}
+\end{titlepage}
+\pagestyle {plain}
+
+\tableofcontents
+
+\chapter{Project description}
+
+\section{Introduction}
+The Alpinist Tracking and Alerting system short ATAS has two main functionalities.
+\begin{enumerate}
+\item Track peobles location which are located on a mountain for example skiers, hikers... short alpinists.
+\item Alarm a rescue team if the user had an accident
+\end{enumerate}
+
+
+\newpage
+\section{Systemarchitecture, Abstract}
+This section will provide an abstract overview which kind of components are used in the ATAS System.\\
+The sytem will be devided into different modules. All the modules and users of the system are explained on the next page.\\
+
+\includegraphics[width=0.93\textwidth]{img/ATAS_SystemOverview_Abstract.png}
+
+\subsection{System Users}
+\subsubsection{Alpinist}
+Generalization: Skier, hiker or any other person in the mountains.
+\subsubsection{Administrators}
+The administrators of the system are peoble working for a tourism region, hospital or rescue teams like the Rega.
+
+\subsection{System Modules}
+\subsubsection{Tracker}
+Imagine a small mobile device, following called \textbf{tracker}. The Tracker can be carried by an \textbf{alpinists}.\\[0.3cm]
+The tracker device is equipped with an \textbf{alarm-button} and a \textbf{speaker}. With the alarm-button, the alpinist can inform the administrators about an accident. For example if the aplinist broke its knee.\\[0.3cm]
+The speaker is used to inform the alpinist, with an alarming sound, that he's situated inside a dangerzone and he would better leave this zone immediately. A dangerzone is a place with a high possibility for an accident, for example, an area with a high possibility for an avalanche.\\[0.3cm]
+The tracker is sending its GPS position to a receiver station, following called \textbf{gateway}. 
+\subsubsection{Gateway}
+A device which is able to talk to the trackers. The gateway can be installed in a village/ building in the valley next to the mountains.\\[0.3cm]
+All the gateway are sending the received locations from the trackers to a central datamanager called \textbf{broker}. 
+\subsubsection{Broker}
+The broker collects data and stores them. The Broker provides an Interface where we can grab all the data and use them in a webapplication.
+
+\subsubsection{Webapplication}
+The administrators can use a  \textbf{webapplication} to 
+\begin{itemize}
+\item
+Monitor the actual position of the persons on the mountains. 
+\item
+Define dangerzones
+\end{itemize}
+
+\subsubsection{Logic}
+Software / service which calculates if a tracker is inside a dangerzone. If the tracker is inside a dangerzone it will send an alarm to the tracker. The alermsignal is relayed over the Broker.
+
+\section{Usecase}
+So why is the ATAS system useful?
+The ATAS system can be used for:
+\begin{itemize}
+\item If an avalanche is triggered in the mountains, its position can be compared to the position of the trackers.
+If at the time of the incident, a tracker was in this area, the rescue teams can be sent to do a rescue operation. This immediate action will give the victims important seconds and may save lifes.
+\item If peoble were in the avalanche and the tracker survived, the device could keep sending data and support the rescue team in their mission bye pointing them to the persons. If no transmission is possible through snow, the rescue team has at least his last GPS location, this might reduce the amount of time to find the person. ATAS is not planned as a replacement for Avalanche transceivers, it should be seen as a supplement.
+\item
+If a tracker is moving towards a dangerzone, for example an area with rockfall, the user can be informed with the tracking device.
+\item If an alpinist had an accident in the mountains, the person can send a rescue signal with the tracker device by triggering the alarm-button.
+\end{itemize}
+
+% TODO Use Case Diagram
+
+\newpage
+
+\section{Technologies}
+At first glance this hole system must look very laborious  to a user. Why should a person have to take another device with him on his hikes? He could easily use his smartphone and an App to send his location. This statement is true if we consider only the touristic ski areas of switzerland. In most  ski areas the phone reception is wonderful. If we leave those ''safer'' areas for higher altitude, the reception gets worse or disappears completely. \\[0.3cm]
+This is the reason why for this project another technologies had to be found.\\[0.3cm]
+For this project the following technologies have been used:\\
+MQTT, LoRA, LoRaWAN\\[0.3cm]
+You should get yourself familiar with these technolgies to fully understand the following chapters.
+
+\section{Demarcation}
+This section defines which kind of tasks are to do during this project
+\begin{itemize}
+\item Build a tracking device
+	\begin{itemize}
+		\item
+			The user should be able to trigger a manual alarm and inform the rescue team of an accident
+		\item
+			Tracks the position of the user and sends the data to a data collector
+	\end{itemize}
+\item Build a webpage, which enables the administrators to
+	\begin{itemize}
+		\item
+			view the location of the trackers
+		\item
+			manage dangerzones
+	\end{itemize}
+\item Build a software / service which controls the position of the trackers. If a tracker dwells inside a dangerzone the tracker has to be alerted
+\item Connect all the modules
+\item Setup a broker system
+\end{itemize}
+
+% Chapter Systemarchitecture Detail
+\chapter{Systemarchitecture, Detail}
+This chapter will provide a detailed overview how the ATAS System was implemented. It will be more technical and show in detail how the modules of ATAS interact with each other.
+
+
+\newpage
+\noindent
+\section{Diagramm}
+\includegraphics[width=0.9\textwidth]{img/ATAS_SystemOverview_Detail.png}
+
+\newpage
+\section{Tracker}
+The tracker itself contains differnet components.
+
+\subsection{Computer}
+As my knowledge for hardware close porgramming (c, c++ ...) is failry limited, I decided to use a hardware plattform, which handles most of the system tasks for me. The computer had to be small and doesn't use to much energy. I decided to use a Raspberry Pie 3  single board computer.
+
+\subsubsection{Diagramm}
+The Raspberry Pie is connected to other devices\\[0.3cm]
+\includegraphics[width=\textwidth]{img/ATAS_SystemOverview_Tracker_Computer.jpg}
+
+\subsubsection{Tasks}
+The Raspberry Pie computer will be used to
+\begin{itemize}
+\item Recieve GPS data from the GPS module via UART
+\item Recieve and send data to the Lora Module via SPI
+\item Listen for signals from the alert-button
+\item Enables or disables the speaker
+\end{itemize}
+
+%TODO Real life picture
+
+\newpage
+\subsection{Battery}
+The tracker needs to mobile so we can put it in our backpack. To power the tracker I attached a battery pack over USB.\\[0.3cm]
+Type: Aukey PB-Y3 Battery Pack\\
+Power: 30000mAh\\
+Physical Interface: Attached to the Raspberry Pie over Micro USB.
+\subsubsection{Diagramm}
+\includegraphics[width=0.95\textwidth]{img/ATAS_SystemOverview_Tracker_Battery.png}
+
+\subsection{GPS Module}
+The GPS Module provides the GPS data to the tracker.\\[0.3cm]
+Type: MT3339\\
+Interface:  Acessable via UART.
+\subsubsection{Tasks}
+The GPS module will be used to
+\begin{itemize}
+\item Get the GPS Location(Longitude, Latitude) of the Tracker
+\item Sends GPS data to the Raspberry Pie via UART
+\end{itemize}
+\subsubsection{Diagramm}
+\includegraphics[width=0.95\textwidth]{img/ATAS_SystemOverview_Tracker_GPS.png}
+
+\subsection{LoraWan Modul}
+The LoraWan Modul establishes the wireless connection to the Gateway.\\[0.3cm]
+Type: Lora Module Semtech SX1276\\
+Interface: Acessable via SPI
+\subsubsection{Diagramm}
+\includegraphics[width=0.95\textwidth]{img/ATAS_SystemOverview_Detail_LoRaWan.png}
+
+\subsubsection{Tasks}
+The Lora module will be used to
+\begin{itemize}
+\item Receive and transmit data to LoRaWan gateway.
+\item Receive and transmit data to the Raspberry Pie.
+\end{itemize}
+
+\newpage
+\subsection{Alarm Button}
+Simple Switch.
+\begin{itemize}
+\item Set input on Raspberry Pie GPIO Pin on Low (Alert) or High (no Alert)
+\item Gives the Alpinist the possibility to activateand deactivate the alarm
+\end{itemize}
+
+\subsubsection{Diagramm}
+\includegraphics[width=0.95\textwidth]{img/ATAS_SystemOverview_Detail_AlarmButton.png}
+
+\subsection{Speaker}
+Simple Piezo Speaker
+\subsubsection{Tasks}
+\begin{itemize}
+\item Gets enabled by the Raspberry Pie
+\item Generates an alamring signal, which indicates, that the tracker is inside a dangerzone.
+\end{itemize}
+
+\subsubsection{Diagramm}
+\includegraphics[width=0.95\textwidth]{img/ATAS_SystemOverview_Detail_Sound.png}
+
+\newpage
+\section{Gateway}
+The gateway relays data between the trackers and The Things Network (TTN). What kind of fucntionality TTN is providing is explained later in this docuent.
+
+\subsubsection{Diagramm}
+\includegraphics[width=0.95\textwidth]{img/ATAS_SystemOverview_Detail_Gateway.png}
+
+\subsubsection{Tasks}
+The Lora Gateway will be used to
+\begin{itemize}
+\item Receive and transmit data to the Cloud Network The Things Network (TTN) over LoRaWan via TCP/IP
+\item Sends and receive datat to the Trackers over LoRaWan via Lora
+\end{itemize}
+
+\newpage
+
+\section{Broker}
+The broker has been split up in subcomponents. The broker service hasn't been developed by myself. I use two platforms the Things Network (TTN) and CloudMQTT.
+
+\subsection{The Things Network short TTN}
+The Things Network short TTN is an internet platform whichs allows us to connect LoRaWan devices. TTN will send (Downlink) and receive (Uplink) data from the trackers via gateway. TTN will collect and store all the data which the gateways send to them. TTN provies a MQTT Broker to access the data more easily.
+
+\subsubsection{Diagramm}
+\includegraphics[width=\textwidth]{img/ATAS_SystemOverview_Detail_TTN.png}
+
+\subsubsection{Tasks}
+\begin{itemize}
+\item Manage trackers
+\item Manage gateways
+\item Provides MQTT Broker
+\item Send and Receive data from the trackers via gateway
+\end{itemize}
+
+\newpage
+\subsection{CloudMQTT}
+To this date, the TTN MQTT Broker does not provide the possibility to access the data via websocket Interface. To bring MQTT to a  Web Application, another service was needed. I decided to setup CloudMQTT. CloudMQTT mirrors the TTN MQTT Broker (Topics) and provides an Websocket Interface.
+
+\subsubsection{Diagramm}
+\includegraphics[width=\textwidth]{img/ATAS_SystemOverview_Detail_CloudMQTT.png}
+
+\subsubsection{Tasks}
+\begin{itemize}
+\item Subscibes and pusblishes to all Topics on the TTN MQTT Broker. It is mirroring the TTN MQTT Broker.
+\item Provides Websocket Interfaces so we can connect from our applications via MQTT over Websocket.
+\end{itemize}
+
+\newpage
+\section{Software}
+\subsection{Atas-Service}
+Atas-Service calculates if a tracker is inside a dangerzone. The service is comparing the GPS location of the tracker with the geographical area of the dangerzone. If the tracker is inside a dangerzone it will send an alarm to the tracker. The alarmsignal is relayed over the Broker.
+
+\subsubsection{Diagramm}
+\includegraphics[width=\textwidth]{img/ATAS_SystemOverview_Detail_atasservice.png}
+
+
+\subsubsection{Tasks}
+\begin{itemize}
+\item Provide a Rest API to Access Data: Dangerzones
+\item Calculates Data example: Is a User in a danger zone...
+\item Publish data to the MQTT Broker
+\item Read/write to the Database
+\end{itemize}
+
+\subsubsection{Database}
+Mongo DB Database.
+\subsubsection{Tasks}
+\begin{itemize}
+\item Stores Data: Dangerzones
+\end{itemize}
+
+
+\subsection{Atas-Web}
+React.js Webapplication
+\subsubsection{Tasks}
+\begin{itemize}
+\item MQTT communication with the Cloud MQTT Broker (Tracker, GPS...)
+\item Rest communication with Atas-Service to Fetch Dangerzones
+\item Shows Tracker on a Map
+\end{itemize}
+  
+\subsection{Atas-Node}  
+
+
+
+\chapter{Data}
+\section{TTN MQTT}
+The following structure 
+\subsection{Topics}
+\includegraphics[width=\textwidth]{img/ATAS_MQTT_Topic.png}\\[1cm]    
+
+
+\chapter{Attachments}
+\section{Code}
+All code written for this projects hase been uploaded to github. No code will be attached to this documentation. Follow the links provided to access the code.
+\subsection{Atas-Webapp}
+\url{https://github.com/schmm2/atas-webapp}
+\subsection{Atas-Node}
+\url{https://github.com/schmm2/atas-node}
+\subsection{Atas-Service}
+\url{https://github.com/schmm2/atas-service}
+
+
+\printglossaries
+
+\end{document}
