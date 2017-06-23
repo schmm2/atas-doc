@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.28)  23 JUN 2017 00:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.28)  23 JUN 2017 23:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -765,31 +765,34 @@ Package: supertabular 2004/02/20 v4.1e the supertabular environment
 ty
 Package: glossary-tree 2015/02/03 v4.13 (NLCT)
 \glstreeindent=\skip77
-))
+)) (/usr/local/texlive/2015/texmf-dist/tex/latex/lastpage/lastpage.sty
+Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
+)
 \c@exmp=\count148
 \glswrite=\write3
 \glo@main@file=\write4
 \openout4 = `Projekt2_ATAS_Schmidli.glo'.
 
 Package glossaries Info: Writing glossary file Projekt2_ATAS_Schmidli.glo on in
-put line 31.
- (./Projekt2_ATAS_Schmidli.aux)
+put line 51.
+
+(./Projekt2_ATAS_Schmidli.aux)
 \openout1 = `Projekt2_ATAS_Schmidli.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -854,7 +857,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box34
-Package hyperref Info: Link coloring OFF on input line 36.
+Package hyperref Info: Link coloring OFF on input line 56.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -864,27 +867,30 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count155
 )
-LaTeX Info: Redefining \ref on input line 36.
-LaTeX Info: Redefining \pageref on input line 36.
-LaTeX Info: Redefining \nameref on input line 36.
+LaTeX Info: Redefining \ref on input line 56.
+LaTeX Info: Redefining \pageref on input line 56.
+LaTeX Info: Redefining \nameref on input line 56.
 
 (./Projekt2_ATAS_Schmidli.out) (./Projekt2_ATAS_Schmidli.out)
 \@outlinefile=\write5
 \openout5 = `Projekt2_ATAS_Schmidli.out'.
 
+Package lastpage Info: Please have a look at the pageslts package at
+(lastpage)             https://www.ctan.org/pkg/pageslts
+(lastpage)             ! on input line 56.
 
 <img/bfh_logo.png, id=76, 65.24374pt x 90.3375pt>
 File: img/bfh_logo.png Graphic file (type png)
  <use img/bfh_logo.png>
-Package pdftex.def Info: img/bfh_logo.png used on input line 42.
+Package pdftex.def Info: img/bfh_logo.png used on input line 62.
 (pdftex.def)             Requested size: 34.14409pt x 47.27626pt.
 
 <img/atas_logo.png, id=77, 201.25188pt x 229.35687pt>
 File: img/atas_logo.png Graphic file (type png)
  <use img/atas_logo.png>
-Package pdftex.def Info: img/atas_logo.png used on input line 53.
+Package pdftex.def Info: img/atas_logo.png used on input line 73.
 (pdftex.def)             Requested size: 85.35696pt x 97.27763pt.
-LaTeX Font Info:    Try loading font information for U+lasy on input line 61.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 81.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
@@ -901,7 +907,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.79 \chapter
+l.99 \chapter
              {Project description} [1
 
 ]
@@ -909,226 +915,260 @@ Chapter 1.
 [2
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 91--93
+Underfull \hbox (badness 10000) in paragraph at lines 111--113
 
  []
 
-<img/ATAS_SystemOverview_Abstract.png, id=124, 705.63625pt x 884.30376pt>
+<img/ATAS_SystemOverview_Abstract.png, id=127, 705.63625pt x 884.30376pt>
 File: img/ATAS_SystemOverview_Abstract.png Graphic file (type png)
 
 <use img/ATAS_SystemOverview_Abstract.png>
 Package pdftex.def Info: img/ATAS_SystemOverview_Abstract.png used on input lin
-e 94.
+e 114.
 (pdftex.def)             Requested size: 396.91283pt x 497.40616pt.
  [3 <./img/ATAS_SystemOverview_Abstract.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 118.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 138.
 
  (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 118.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 138.
  [4]
 [5] [6]
 Chapter 2.
 [7
 
-] <img/ATAS_SystemOverview_Detail.png, id=158, 1064.97874pt x 1439.3775pt>
+] <img/ATAS_SystemOverview_Detail.png, id=167, 1062.97125pt x 1439.3775pt>
 File: img/ATAS_SystemOverview_Detail.png Graphic file (type png)
 
 <use img/ATAS_SystemOverview_Detail.png>
 Package pdftex.def Info: img/ATAS_SystemOverview_Detail.png used on input line 
-179.
-(pdftex.def)             Requested size: 384.1096pt x 519.14189pt.
+199.
+(pdftex.def)             Requested size: 384.1096pt x 520.13022pt.
  [8 <./img/ATAS_SystemOverview_Detail.png>]
-<img/ATAS_SystemOverview_Tracker_Computer.jpg, id=165, 733.74126pt x 362.35374p
+<img/ATAS_SystemOverview_Tracker_Computer.jpg, id=174, 733.74126pt x 362.35374p
 t>
 File: img/ATAS_SystemOverview_Tracker_Computer.jpg Graphic file (type jpg)
  <use img/ATAS_SystemOverview_Tracker_Computer.jpg>
 Package pdftex.def Info: img/ATAS_SystemOverview_Tracker_Computer.jpg used on i
-nput line 190.
+nput line 210.
 (pdftex.def)             Requested size: 426.79135pt x 210.77351pt.
- [9 <./img/ATAS_SystemOverview_Tracker_Computer.jpg>]
-<img/ATAS_SystemOverview_Tracker_Battery.png, id=173, 733.74126pt x 241.90375pt
+
+<img/atas-tracker-assembled.jpg, id=175, 4047.12pt x 3035.34pt>
+File: img/atas-tracker-assembled.jpg Graphic file (type jpg)
+
+<use img/atas-tracker-assembled.jpg>
+Package pdftex.def Info: img/atas-tracker-assembled.jpg used on input line 224.
+
+(pdftex.def)             Requested size: 426.79135pt x 320.08641pt.
+ [9 <./img/ATAS_SystemOverview_Tracker_Computer.jpg>] [10 <./img/atas-tracker-a
+ssembled.jpg>]
+<img/atas-tracker-disassembled.jpg, id=190, 3309.36375pt x 3035.34pt>
+File: img/atas-tracker-disassembled.jpg Graphic file (type jpg)
+
+<use img/atas-tracker-disassembled.jpg>
+Package pdftex.def Info: img/atas-tracker-disassembled.jpg used on input line 2
+29.
+(pdftex.def)             Requested size: 426.79135pt x 391.4123pt.
+ [11 <./img/atas-tracker-disassembled.jpg>]
+<img/ATAS_SystemOverview_Tracker_Battery.png, id=196, 733.74126pt x 241.90375pt
 >
 File: img/ATAS_SystemOverview_Tracker_Battery.png Graphic file (type png)
  <use img/ATAS_SystemOverview_Tracker_Battery.png>
 Package pdftex.def Info: img/ATAS_SystemOverview_Tracker_Battery.png used on in
-put line 210.
+put line 245.
 (pdftex.def)             Requested size: 405.45047pt x 133.67126pt.
 
-<img/ATAS_SystemOverview_Tracker_GPS.png, id=174, 733.74126pt x 151.56625pt>
+<img/ATAS_SystemOverview_Tracker_GPS.png, id=197, 733.74126pt x 151.56625pt>
 File: img/ATAS_SystemOverview_Tracker_GPS.png Graphic file (type png)
 
 <use img/ATAS_SystemOverview_Tracker_GPS.png>
 Package pdftex.def Info: img/ATAS_SystemOverview_Tracker_GPS.png used on input 
-line 217.
+line 252.
 (pdftex.def)             Requested size: 405.45047pt x 83.75253pt.
- [10 <./img/ATAS_SystemOverview_Tracker_Battery.png> <./img/ATAS_SystemOverview
+ [12 <./img/ATAS_SystemOverview_Tracker_Battery.png> <./img/ATAS_SystemOverview
 _Tracker_GPS.png>]
-<img/ATAS_SystemOverview_Detail_LoRaWan.png, id=186, 803.0pt x 442.65375pt>
+<img/ATAS_SystemOverview_Detail_LoRaWan.png, id=211, 803.0pt x 442.65375pt>
 File: img/ATAS_SystemOverview_Detail_LoRaWan.png Graphic file (type png)
 
 <use img/ATAS_SystemOverview_Detail_LoRaWan.png>
 Package pdftex.def Info: img/ATAS_SystemOverview_Detail_LoRaWan.png used on inp
-ut line 231.
+ut line 266.
 (pdftex.def)             Requested size: 405.45047pt x 223.50797pt.
- [11 <./img/ATAS_SystemOverview_Detail_LoRaWan.png>]
-<img/ATAS_SystemOverview_Detail_AlarmButton.png, id=195, 914.41624pt x 181.6787
+ [13 <./img/ATAS_SystemOverview_Detail_LoRaWan.png>]
+<img/ATAS_SystemOverview_Detail_AlarmButton.png, id=221, 914.41624pt x 181.6787
 6pt>
 File: img/ATAS_SystemOverview_Detail_AlarmButton.png Graphic file (type png)
  <use img/ATAS_SystemOverview_Detail_AlarmButton.png>
 Package pdftex.def Info: img/ATAS_SystemOverview_Detail_AlarmButton.png used on
- input line 249.
+ input line 284.
 (pdftex.def)             Requested size: 405.45047pt x 80.55432pt.
 
-<img/ATAS_SystemOverview_Detail_Sound.png, id=196, 733.74126pt x 231.86626pt>
+<img/ATAS_SystemOverview_Detail_Sound.png, id=222, 733.74126pt x 231.86626pt>
 File: img/ATAS_SystemOverview_Detail_Sound.png Graphic file (type png)
 
 <use img/ATAS_SystemOverview_Detail_Sound.png>
 Package pdftex.def Info: img/ATAS_SystemOverview_Detail_Sound.png used on input
- line 260.
+ line 295.
 (pdftex.def)             Requested size: 405.45047pt x 128.12474pt.
- [12 <./img/ATAS_SystemOverview_Detail_AlarmButton.png> <./img/ATAS_SystemOverv
+ [14 <./img/ATAS_SystemOverview_Detail_AlarmButton.png> <./img/ATAS_SystemOverv
 iew_Detail_Sound.png>]
-<img/ATAS_SystemOverview_Detail_Gateway.png, id=209, 801.99625pt x 655.44875pt>
+<img/ATAS_SystemOverview_Detail_Gateway.png, id=235, 801.99625pt x 655.44875pt>
 File: img/ATAS_SystemOverview_Detail_Gateway.png Graphic file (type png)
 <use img/ATAS_SystemOverview_Detail_Gateway.png>
 Package pdftex.def Info: img/ATAS_SystemOverview_Detail_Gateway.png used on inp
-ut line 267.
+ut line 302.
 (pdftex.def)             Requested size: 405.45047pt x 331.36404pt.
- [13 <./img/ATAS_SystemOverview_Detail_Gateway.png>]
-<img/ATAS_SystemOverview_Detail_TTN.png, id=217, 801.99625pt x 452.69125pt>
+ [15 <./img/ATAS_SystemOverview_Detail_Gateway.png>]
+<img/ATAS_SystemOverview_Detail_TTN.png, id=244, 801.99625pt x 452.69125pt>
 File: img/ATAS_SystemOverview_Detail_TTN.png Graphic file (type png)
 
 <use img/ATAS_SystemOverview_Detail_TTN.png>
 Package pdftex.def Info: img/ATAS_SystemOverview_Detail_TTN.png used on input l
-ine 285.
+ine 320.
 (pdftex.def)             Requested size: 426.79135pt x 240.90608pt.
- [14 <./img/ATAS_SystemOverview_Detail_TTN.png>]
-<img/ATAS_SystemOverview_Detail_CloudMQTT.png, id=226, 803.0pt x 814.04124pt>
+ [16 <./img/ATAS_SystemOverview_Detail_TTN.png>]
+<img/ATAS_SystemOverview_Detail_CloudMQTT.png, id=254, 803.0pt x 814.04124pt>
 File: img/ATAS_SystemOverview_Detail_CloudMQTT.png Graphic file (type png)
 
 <use img/ATAS_SystemOverview_Detail_CloudMQTT.png>
 Package pdftex.def Info: img/ATAS_SystemOverview_Detail_CloudMQTT.png used on i
-nput line 302.
+nput line 337.
 (pdftex.def)             Requested size: 401.1849pt x 406.70909pt.
- [15 <./img/ATAS_SystemOverview_Detail_CloudMQTT.png>]
-<img/ATAS_SystemOverview_Detail_atasservice.png, id=234, 803.0pt x 566.115pt>
+ [17 <./img/ATAS_SystemOverview_Detail_CloudMQTT.png>]
+<img/ATAS_SystemOverview_Detail_atasservice.png, id=263, 803.0pt x 566.115pt>
 File: img/ATAS_SystemOverview_Detail_atasservice.png Graphic file (type png)
 
 <use img/ATAS_SystemOverview_Detail_atasservice.png>
 Package pdftex.def Info: img/ATAS_SystemOverview_Detail_atasservice.png used on
- input line 312.
+ input line 347.
 (pdftex.def)             Requested size: 426.79135pt x 300.8947pt.
- [16 <./img/ATAS_SystemOverview_Detail_atasservice.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 316--317
+ [18 <./img/ATAS_SystemOverview_Detail_atasservice.png>]
+<img/atas-service-process-diagramm.png, id=274, 763.85374pt x 1325.95375pt>
+File: img/atas-service-process-diagramm.png Graphic file (type png)
+
+<use img/atas-service-process-diagramm.png>
+Package pdftex.def Info: img/atas-service-process-diagramm.png used on input li
+ne 353.
+(pdftex.def)             Requested size: 375.57846pt x 651.9486pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 353--354
 
  []
 
-<img/atas-web.png, id=242, 1377.145pt x 799.98875pt>
+
+Overfull \vbox (74.0184pt too high) has occurred while \output is active []
+
+
+[19 <./img/atas-service-process-diagramm.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 357--358
+
+ []
+
+<img/atas-web.png, id=281, 1377.145pt x 799.98875pt>
 File: img/atas-web.png Graphic file (type png)
  <use img/atas-web.png>
-Package pdftex.def Info: img/atas-web.png used on input line 318.
+Package pdftex.def Info: img/atas-web.png used on input line 359.
 (pdftex.def)             Requested size: 426.79135pt x 247.9207pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 318--319
+Overfull \hbox (17.0pt too wide) in paragraph at lines 359--360
 [][] 
  []
 
-[17 <./img/atas-web.png>]
-<img/atas-web-map.png, id=249, 968.61874pt x 588.1975pt>
+[20 <./img/atas-web.png>]
+<img/atas-web-map.png, id=289, 968.61874pt x 588.1975pt>
 File: img/atas-web-map.png Graphic file (type png)
 
 <use img/atas-web-map.png>
-Package pdftex.def Info: img/atas-web-map.png used on input line 326.
+Package pdftex.def Info: img/atas-web-map.png used on input line 367.
 (pdftex.def)             Requested size: 426.79135pt x 259.17567pt.
 
-Overfull \hbox (27.37506pt too wide) in paragraph at lines 324--327
+Overfull \hbox (27.37506pt too wide) in paragraph at lines 365--368
 [] 
  []
 
-<img/atas-web-adddangerzone.png, id=250, 124.465pt x 259.97125pt>
+<img/atas-web-adddangerzone.png, id=290, 124.465pt x 259.97125pt>
 File: img/atas-web-adddangerzone.png Graphic file (type png)
 
 <use img/atas-web-adddangerzone.png>
-Package pdftex.def Info: img/atas-web-adddangerzone.png used on input line 330.
+Package pdftex.def Info: img/atas-web-adddangerzone.png used on input line 371.
 
 (pdftex.def)             Requested size: 85.35696pt x 178.28947pt.
- [18 <./img/atas-web-map.png> <./img/atas-web-adddangerzone.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 333--334
+ [21 <./img/atas-web-map.png> <./img/atas-web-adddangerzone.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 374--375
 
  []
 
-<img/atas-web-drawing.png, id=259, 515.9275pt x 522.95375pt>
+<img/atas-web-drawing.png, id=299, 515.9275pt x 522.95375pt>
 File: img/atas-web-drawing.png Graphic file (type png)
 
 <use img/atas-web-drawing.png>
-Package pdftex.def Info: img/atas-web-drawing.png used on input line 335.
+Package pdftex.def Info: img/atas-web-drawing.png used on input line 376.
 (pdftex.def)             Requested size: 213.39568pt x 216.30359pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 335--336
+Underfull \hbox (badness 10000) in paragraph at lines 376--377
 
  []
 
-<img/atas-web-dangerzone.png, id=260, 1163.34625pt x 841.1425pt>
+<img/atas-web-dangerzone.png, id=300, 1163.34625pt x 841.1425pt>
 File: img/atas-web-dangerzone.png Graphic file (type png)
 
 <use img/atas-web-dangerzone.png>
-Package pdftex.def Info: img/atas-web-dangerzone.png used on input line 338.
+Package pdftex.def Info: img/atas-web-dangerzone.png used on input line 379.
 (pdftex.def)             Requested size: 384.1096pt x 277.7319pt.
 
-<img/atas-web-alertbutton.png, id=261, 124.465pt x 259.97125pt>
+<img/atas-web-alertbutton.png, id=301, 124.465pt x 259.97125pt>
 File: img/atas-web-alertbutton.png Graphic file (type png)
 
 <use img/atas-web-alertbutton.png>
-Package pdftex.def Info: img/atas-web-alertbutton.png used on input line 341.
+Package pdftex.def Info: img/atas-web-alertbutton.png used on input line 382.
 (pdftex.def)             Requested size: 85.35696pt x 178.28947pt.
 
-<img/atas-web-alertoverview.png, id=262, 877.2775pt x 369.38pt>
+<img/atas-web-alertoverview.png, id=302, 877.2775pt x 369.38pt>
 File: img/atas-web-alertoverview.png Graphic file (type png)
 
 <use img/atas-web-alertoverview.png>
-Package pdftex.def Info: img/atas-web-alertoverview.png used on input line 344.
+Package pdftex.def Info: img/atas-web-alertoverview.png used on input line 385.
 
 (pdftex.def)             Requested size: 426.79135pt x 179.70143pt.
 
-Overfull \hbox (27.37506pt too wide) in paragraph at lines 340--345
+Overfull \hbox (27.37506pt too wide) in paragraph at lines 381--386
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 340--345
+Underfull \hbox (badness 10000) in paragraph at lines 381--386
 
  []
 
-[19 <./img/atas-web-drawing.png> <./img/atas-web-dangerzone.png>] [20 <./img/at
+[22 <./img/atas-web-drawing.png> <./img/atas-web-dangerzone.png>] [23 <./img/at
 as-web-alertbutton.png> <./img/atas-web-alertoverview.png>]
-<img/atas-web-search.png, id=275, 1144.275pt x 620.3175pt>
+<img/atas-web-search.png, id=318, 1144.275pt x 620.3175pt>
 File: img/atas-web-search.png Graphic file (type png)
 
 <use img/atas-web-search.png>
-Package pdftex.def Info: img/atas-web-search.png used on input line 349.
+Package pdftex.def Info: img/atas-web-search.png used on input line 390.
 (pdftex.def)             Requested size: 426.79135pt x 231.36908pt.
 
-Overfull \hbox (27.37506pt too wide) in paragraph at lines 347--350
+Overfull \hbox (27.37506pt too wide) in paragraph at lines 388--391
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 347--350
+Underfull \hbox (badness 10000) in paragraph at lines 388--391
 
  []
 
-[21 <./img/atas-web-search.png>] [22]
-<img/atas-node-process.png, id=288, 866.23625pt x 1566.85374pt>
+[24 <./img/atas-web-search.png>] [25]
+<img/atas-node-process.png, id=334, 866.23625pt x 1566.85374pt>
 File: img/atas-node-process.png Graphic file (type png)
 
 <use img/atas-node-process.png>
-Package pdftex.def Info: img/atas-node-process.png used on input line 375.
+Package pdftex.def Info: img/atas-node-process.png used on input line 416.
 (pdftex.def)             Requested size: 375.57846pt x 679.35242pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 375--376
+Underfull \hbox (badness 10000) in paragraph at lines 416--417
 
  []
 
@@ -1136,58 +1176,67 @@ Underfull \hbox (badness 10000) in paragraph at lines 375--376
 Overfull \vbox (101.42223pt too high) has occurred while \output is active []
 
 
-[23 <./img/atas-node-process.png>]
+[26 <./img/atas-node-process.png>]
 Chapter 3.
-<img/ATAS_MQTT_Topic.png, id=294, 1125.20375pt x 412.54124pt>
+<img/ATAS_MQTT_Topic.png, id=341, 1125.20375pt x 412.54124pt>
 File: img/ATAS_MQTT_Topic.png Graphic file (type png)
 
 <use img/ATAS_MQTT_Topic.png>
-Package pdftex.def Info: img/ATAS_MQTT_Topic.png used on input line 382.
+Package pdftex.def Info: img/ATAS_MQTT_Topic.png used on input line 422.
 (pdftex.def)             Requested size: 426.79135pt x 156.47774pt.
+ [27
 
-Underfull \hbox (badness 10000) in paragraph at lines 382--383
+ <./img/ATAS_MQTT_Topic.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 426--427
 
  []
 
-[24
+<img/atas-tracker2ttn.png, id=349, 644.4075pt x 212.795pt>
+File: img/atas-tracker2ttn.png Graphic file (type png)
 
- <./img/ATAS_MQTT_Topic.png>]
+<use img/atas-tracker2ttn.png>
+Package pdftex.def Info: img/atas-tracker2ttn.png used on input line 436.
+(pdftex.def)             Requested size: 426.79135pt x 140.93866pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 436--437
+
+ []
+
+[28 <./img/atas-tracker2ttn.png>]
 Chapter 4.
-[25
+[29
 
 ]
 Chapter 5.
-[26
-
-]
-Chapter 6.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 392.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 449.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 No file Projekt2_ATAS_Schmidli.gls.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 401.
-[27
+
+AED: lastpage setting LastPage
+[30
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 401.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 458.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 458.
  (./Projekt2_ATAS_Schmidli.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 401.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 401.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 458.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 458.
 Package rerunfilecheck Info: File `Projekt2_ATAS_Schmidli.out' has not changed.
 
-(rerunfilecheck)             Checksum: B28515A68509177D5EB3C79185CC887D;972.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 401.
+(rerunfilecheck)             Checksum: 8CF4DE188D3F5CF72909904E0402DFE4;976.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 458.
  ) 
 Here is how much of TeX's memory you used:
- 12352 strings out of 493089
- 186033 string characters out of 6134841
- 358700 words of memory out of 5000000
- 15453 multiletter control sequences out of 15000+600000
- 18801 words of font info for 45 fonts, out of 8000000 for 9000
+ 12410 strings out of 493089
+ 187387 string characters out of 6134841
+ 361461 words of memory out of 5000000
+ 15495 multiletter control sequences out of 15000+600000
+ 20044 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,4n,43p,1831b,416s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 46i,10n,43p,1831b,418s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
 /usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></u
@@ -1203,10 +1252,10 @@ ve/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive
 015/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/201
 5/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2015/
 texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on Projekt2_ATAS_Schmidli.pdf (28 pages, 27190418 bytes).
+Output written on Projekt2_ATAS_Schmidli.pdf (31 pages, 35122594 bytes).
 PDF statistics:
- 390 PDF objects out of 1000 (max. 8388607)
- 297 compressed objects within 3 object streams
- 92 named destinations out of 1000 (max. 500000)
- 265 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 444 PDF objects out of 1000 (max. 8388607)
+ 341 compressed objects within 4 object streams
+ 98 named destinations out of 1000 (max. 500000)
+ 285 words of extra memory for PDF output out of 10000 (max. 10000000)
 

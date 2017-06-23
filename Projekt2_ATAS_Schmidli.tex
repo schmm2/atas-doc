@@ -16,6 +16,26 @@
 \usepackage{mathtools}
 \usepackage[xindy]{glossaries}
 \usepackage{hyperref}
+\usepackage{lastpage}
+
+% clear default
+\fancyhead{}
+\fancyfoot{}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt} % optional
+\fancyfoot[L]{Chapter: \nouppercase{\leftmark}}
+\fancyfoot[R]{\thepage/\pageref{LastPage}}
+
+% Redefine the plain page style, Chpater page
+\fancypagestyle{plain}{%
+  \fancyhf{}
+  \renewcommand{\headrulewidth}{0pt} % optional
+  \fancyfoot[R]{\thepage/\pageref{LastPage}}
+}
+
+\renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{#1}}{}}
 
 % Glossar
 \newglossaryentry{ATAS}
@@ -72,14 +92,14 @@ Mohamed \textsc{Mokdad}
 Bern, {\large \today}
 \end{center}
 \end{titlepage}
-\pagestyle {plain}
+\pagestyle{fancy}
 
 \tableofcontents
 
 \chapter{Project description}
 
 \section{Introduction}
-The Alpinist Tracking and Alerting system short ATAS has two main functionalities.
+The Alpinist Tracker and Alerting system short ATAS has two main functionalities.
 \begin{enumerate}
 \item Track peobles location which are located on a mountain for example skiers, hikers... short called alpinists.
 \item Alarm a rescue team if the alpinist had an accident
@@ -169,7 +189,7 @@ This section defines which kind of tasks are to do during this project. These go
 \end{itemize}
 
 % Chapter Systemarchitecture Detail
-\chapter{Systemarchitecture, Detail}
+\chapter{Systemarchitecture}
 This chapter will provide a detailed overview how the ATAS System was implemented. It will be more technical and show in detail how the modules of ATAS interact with each other.
 
 
@@ -198,7 +218,22 @@ The Raspberry Pie computer is used to
 \item Enables or disables the speaker
 \end{itemize}
 
-%TODO Real life picture
+\subsubsection{Finished product}
+The following pictures show the final tracker I built during this project\\[0.3cm]
+Picture of the assembled tracker\\[0.3cm]
+\includegraphics[width=\textwidth]{img/atas-tracker-assembled.jpg}
+The alarm-button was placed on top of the case. All the other components are safely stored inside a case.
+\newpage
+\noindent
+Picture of the disassembled tracker\\[0.3cm]
+\includegraphics[width=\textwidth]{img/atas-tracker-disassembled.jpg}
+\begin{itemize}
+\item A: GPS Module with the corrsponding antenna
+\item B: LoRa Module with the corresponding antenna
+\item C: Piezo Speaker
+\item D: Raspberry Pie computer
+\item E: Alarm-button
+\end{itemize}
 
 \newpage
 \subsection{Battery}
@@ -311,6 +346,12 @@ Atas-service is a node.js application written in Javascript.
 \subsubsection{Diagramm}
 \includegraphics[width=\textwidth]{img/ATAS_SystemOverview_Detail_atasservice.png}
 
+
+\subsubsection{Process - MQTT Message arrives}
+The flow chart  on the next page displays the process when a new MQTT message with GPS location data arrives. The flowchart doesn't represent the actual code. Dummy syntax /code was used to make the chart as understandable as possible.
+\newpage
+\includegraphics[width=0.88\textwidth]{img/atas-service-process-diagramm.png}\\
+
 \newpage
 \subsection{Atas-Web}
 Atas-Web is the management interface of the ATAS System. Atas-Web is a webapplication. The application is written in Javascript and leverages the React.js library.\\[0.3cm]
@@ -354,10 +395,10 @@ We can use the search bar to search for a location. Found locations are displaye
   
 \subsection{Atas-Node}  
 Atas-Node is the software component running on the tracker computer. The software is written in c++.\\[0.3cm]
-To make the communication between atas-node and the GPS Module as easy as possible I decided to install GPSD. GPSD is a daemin running on the linux os on the tracker. GPSD provides us a simple interface and a c++ library to query the actual GPS position. No data decoding needed, everything is already taken care of.\
+To make the communication between atas-node and the GPS Module as easy as possible I decided to install GPSD. GPSD is a daemon running on the linux Operating System on the tracker. GPSD provides us a simple interface and a c++ library to query the actual GPS position.
 
 \subsubsection{Functionality}
-For every task I created a separate module / class in c++.
+For every task I created a separate class in c++.
 \begin{itemize}
 \item \textbf{Ataslora}\\
 Handles the communication with the LoRaWan Module. Used for sending and receiving data
@@ -369,25 +410,41 @@ Initialized the GPIO PIN to act as an Input. Reads the GPIO levels, High or Low.
 Controls the Piezo speaker. Enables or disables the alarmsound.
 \end{itemize}
 
-\subsubsection{Process}
-On the next page you are going to see a flow chart of the atas-node programm. The flowchart doesn't represent the actual code. Dummy syntax /code was used to make the chart as understanbale as possible.
+\subsubsection{Process - Hole program}
+On the next page you are going to see a flow chart of the atas-node programm. The flowchart doesn't represent the actual code. Dummy syntax /code was used to make the chart as understandable as possible.
 \newpage
 \includegraphics[width=0.88\textwidth]{img/atas-node-process}\\
 
-
-\chapter{Data}
-\section{TTN MQTT}
+\chapter{Dataflow}
+\section{MQTT}
 The following topic structure is used for the MQTT communication
 \subsection{Topics}
-\includegraphics[width=\textwidth]{img/ATAS_MQTT_Topic.png}\\[1cm]    
+\includegraphics[width=\textwidth]{img/ATAS_MQTT_Topic.png}
 
-\chapter{Future}
+\newpage
+\section{Tracker}
+This section will describe which data is send and received by the tracker\\
+\subsection{Tracker $\rightarrow$ TTN}
+The tracker sends messages to the TTN via LoRaWan gateway.\\
+A message contains 4 values.
+\begin{itemize}
+\item Latitude: GPS latitude of the tracker
+\item Longitude: GPS longitude of the tracker
+\item Button pressed: If the switch has been set to on the value is 1 otherwise the value is 0.
+\item In Dangerzone: When a tracker is inside a dangerzone it will be informed by the atas-service (downlink). The tracker stores this informaton but also sends back the information to the TTN (uplink). This mechanism was developed to have an acknowledement from the trackerto check  if he received the alarm signal. The Value is 1 if the tracker is in a dangerzone and 0 if the tracker is not inside a dangerzone.
+\end{itemize}
+\includegraphics[width=\textwidth]{img/atas-tracker2ttn.png}\\
 
 \chapter{Conclusion}
+I had my concerns at the beginnen of this project as it required some know-how in electronic components, currenct flow and so on. As I'm an IT system engineer and not an electronics technician I always tried to avoid this topic, but im glad I confronted myself with it during this project.\\[0.3cm]
+During this project I designed a systemarchitecture, created a functioning prototyp and extended my kowledge about technologies like MQTT, LoRaWan and the The Things Network. I learned many interesting new things. Most importantly I created something which actually can be used in this world and be a help to somebody.\\[0.3cm]
+Looking back I should have done one thing differently. I should have planned my time better by creating a projects-timetable and stick to it. In the last couple weeks I worked very hard on this project while during the first half of the semester I only did the minimum.\\[0.3cm]
+This project is far from being completed. I see a huge potential in this kind of technology and would like to invest more time to bring this project to the next level. There are many componenets which should be improved and many aspects which should be researched and tested better. For example what is the maximum distance a signal can be transmitted? Does the weather have an impact on the signal? Does the signal travel through snow? And so on. There are many unanswered questions for which I saddly didn't have time to research.
+
 
 \chapter{Attachments}
 \section{Code}
-All code written for this projects hase been uploaded to github. No code will be attached to this documentation. Follow the links provided to access the code.
+All code written for this projects hase been uploaded to github platform. No code will be attached to this documentation. Follow the links provided to access the code.
 \subsection{Atas-Webapp}
 \url{https://github.com/schmm2/atas-webapp}
 \subsection{Atas-Node}
