@@ -1,26 +1,44 @@
-<mxfile host="app.diagrams.net" modified="2021-09-25T19:06:35.924Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="AU7mAWbVRVPN4z_m2Zcx" version="15.3.2" type="github">
+<mxfile host="app.diagrams.net" modified="2021-09-25T19:14:07.792Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="XkGRMRmeyM_jrTCrmFKK" version="15.3.2" type="github">
   <diagram id="YGflYH7S-0JcMB-x-eqp" name="Page-1">
-    <mxGraphModel dx="472" dy="569" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1221" dy="1850" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="0DDxzS_s1WOMT-R_WDR--1" value="{sitename}&lt;br&gt;App Service" style="sketch=0;aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/mscae/App_Services.svg;" vertex="1" parent="1">
-          <mxGeometry x="320" y="30" width="50" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="0DDxzS_s1WOMT-R_WDR--2" value="{sitename}-backend&lt;br&gt;Function App" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/iot/Function_Apps.svg;" vertex="1" parent="1">
-          <mxGeometry x="190" y="180" width="68" height="60" as="geometry" />
-        </mxCell>
         <mxCell id="0DDxzS_s1WOMT-R_WDR--3" value="{sitename}-aspbackend&lt;br&gt;App Service plan" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/app_services/App_Service_Plans.svg;" vertex="1" parent="1">
-          <mxGeometry x="90" y="331" width="64" height="64" as="geometry" />
+          <mxGeometry x="342" y="210" width="64" height="64" as="geometry" />
         </mxCell>
         <mxCell id="0DDxzS_s1WOMT-R_WDR--4" value="{sitename}-aspfrontend&lt;br&gt;App Service plan" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/app_services/App_Service_Plans.svg;" vertex="1" parent="1">
-          <mxGeometry x="430" y="178" width="64" height="64" as="geometry" />
+          <mxGeometry x="560" y="210" width="64" height="64" as="geometry" />
         </mxCell>
         <mxCell id="0DDxzS_s1WOMT-R_WDR--5" value="{sitename}-keyvault&lt;br&gt;Key vault" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/security/Key_Vaults.svg;" vertex="1" parent="1">
-          <mxGeometry x="640" y="178" width="68" height="68" as="geometry" />
+          <mxGeometry x="146.5" y="208" width="68" height="68" as="geometry" />
         </mxCell>
         <mxCell id="0DDxzS_s1WOMT-R_WDR--6" value="{sitename}-db&lt;br&gt;Azure Cosmos DB Account" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/databases/Azure_Cosmos_DB.svg;" vertex="1" parent="1">
-          <mxGeometry x="313" y="331" width="64" height="64" as="geometry" />
+          <mxGeometry x="150.5" y="-100" width="64" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="0DDxzS_s1WOMT-R_WDR--7" value="kiri{randomnumber}&lt;br&gt;Storage Account" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/storage/Storage_Accounts.svg;" vertex="1" parent="1">
+          <mxGeometry x="150" y="59" width="65" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="0DDxzS_s1WOMT-R_WDR--11" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#E6E6E6;" vertex="1" parent="1">
+          <mxGeometry x="90" y="405" width="150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="0DDxzS_s1WOMT-R_WDR--12" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="299" y="10" width="150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="0DDxzS_s1WOMT-R_WDR--8" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#E6E6E6;" vertex="1" parent="0DDxzS_s1WOMT-R_WDR--12">
+          <mxGeometry width="150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="0DDxzS_s1WOMT-R_WDR--2" value="{sitename}-backend&lt;br&gt;Function App" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/iot/Function_Apps.svg;" vertex="1" parent="0DDxzS_s1WOMT-R_WDR--12">
+          <mxGeometry x="41" y="30" width="68" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0DDxzS_s1WOMT-R_WDR--14" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="517" y="10" width="150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="0DDxzS_s1WOMT-R_WDR--13" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#E6E6E6;" vertex="1" parent="0DDxzS_s1WOMT-R_WDR--14">
+          <mxGeometry width="150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="0DDxzS_s1WOMT-R_WDR--1" value="{sitename}&lt;br&gt;App Service" style="sketch=0;aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/mscae/App_Services.svg;" vertex="1" parent="0DDxzS_s1WOMT-R_WDR--14">
+          <mxGeometry x="50" y="30" width="50" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
