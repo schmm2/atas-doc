@@ -1,1 +1,28 @@
-<mxfile host="app.diagrams.net" modified="2021-09-25T18:55:35.931Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" version="15.3.2" etag="bGDb8YJKZY2sXmtIluzy" type="github"><diagram id="YGflYH7S-0JcMB-x-eqp">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-09-25T19:06:35.924Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="AU7mAWbVRVPN4z_m2Zcx" version="15.3.2" type="github">
+  <diagram id="YGflYH7S-0JcMB-x-eqp" name="Page-1">
+    <mxGraphModel dx="472" dy="569" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="0DDxzS_s1WOMT-R_WDR--1" value="{sitename}&lt;br&gt;App Service" style="sketch=0;aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/mscae/App_Services.svg;" vertex="1" parent="1">
+          <mxGeometry x="320" y="30" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="0DDxzS_s1WOMT-R_WDR--2" value="{sitename}-backend&lt;br&gt;Function App" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/iot/Function_Apps.svg;" vertex="1" parent="1">
+          <mxGeometry x="190" y="180" width="68" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0DDxzS_s1WOMT-R_WDR--3" value="{sitename}-aspbackend&lt;br&gt;App Service plan" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/app_services/App_Service_Plans.svg;" vertex="1" parent="1">
+          <mxGeometry x="90" y="331" width="64" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="0DDxzS_s1WOMT-R_WDR--4" value="{sitename}-aspfrontend&lt;br&gt;App Service plan" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/app_services/App_Service_Plans.svg;" vertex="1" parent="1">
+          <mxGeometry x="430" y="178" width="64" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="0DDxzS_s1WOMT-R_WDR--5" value="{sitename}-keyvault&lt;br&gt;Key vault" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/security/Key_Vaults.svg;" vertex="1" parent="1">
+          <mxGeometry x="640" y="178" width="68" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="0DDxzS_s1WOMT-R_WDR--6" value="{sitename}-db&lt;br&gt;Azure Cosmos DB Account" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/databases/Azure_Cosmos_DB.svg;" vertex="1" parent="1">
+          <mxGeometry x="313" y="331" width="64" height="64" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
